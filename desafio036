@@ -1,0 +1,29 @@
+# Crie Um Programa para aprovar o emprestimo bancario
+# para a compra de uma casa . 
+# Receber o nome e idade , caso a idade seja meno que 18
+# e maior de 60, o programa é incerrado 
+# O programa vai pergunta o Valor da casa , o salario do 
+# comprador e em quantos anos ele vai pagar.
+# Calcule o valor da prestação mensal, sabendo que ele nao 
+# pode exceder 30% do salario ou então o emprestimo dera negado
+z = 0
+porcentagem = 0
+
+nome = str(input("Digite o seu nome: "))
+idade = int(input("Digite sua idade: "))
+
+if idade >= 18 and idade <= 60 :
+    vc = float(input("Digite o valor da Casa: "))
+    s = float(input("Digite o seu Salario: "))
+    p = int(input("Digite em quantos anos voce quer pagar:  "))
+    i = p * 12
+    porcentagem = (s * 30) / 100
+    z = vc / i
+else:
+    print("Sua solicitação foi negada Devido a sua idade não permitida")    
+if idade >=18  and  idade <= 60 and porcentagem >= z :
+    print("Parabens! Seu Emprestimo foi aprovado: ")
+elif idade <= 17 or idade >= 61 :
+    print("")
+else:
+    print("Sua Solicitação foi negado por ultrapassar os 30% do seu salario ") 
